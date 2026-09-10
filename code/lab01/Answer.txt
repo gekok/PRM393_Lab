@@ -1,0 +1,31 @@
+1.	What is the purpose of the flutter doctor command?
+- Mục đích: kiểm tra môi trường phát triển flutter trong máy xem có đúng, đủ không. Nó kiểm tra:
+    + Flutter SDK
+    + Android SDK
+    + Chrome
+    + Visual Studio
+    + 1 số tool khác
+2.	What file acts as the entry point of a Flutter application?
+- Thông thường file lib/main.dart là file khởi đầu.
+    + Trong file có hàm main():
+    void main(){
+        runApp(const MyApp());
+    }
+    + Hàm main() được chạy đầu tiên khi app chạy.
+3.	Explain the difference between Hot Reload and Hot Restart.
+- Hot Reload: cập nhật những thay đổi của ứng dụng mà vẫn dữ nguyên trạng thái hiện tại của ứng dụng.
+- Hot Restart: khởi động lại ứng dụng từ đầu và xóa trạng thái hiện tại.
+4.	How does runApp() build the widget tree?
+- runApp() nhận 1 widget gốc (root widget) và đưa nó vào flutter framework.
+- VD: runApp(const MyApp());
+    Ở đây MyApp là widget gốc. Flutter xây dựng MyApp và lần lượt xây dựng các widget con bên trong tạo thành widget tree
+    MyApp
+     └── Scaffold
+          ├── AppBar
+          └── Body
+               └── Text
+
+5.	Describe how Flutter’s architecture enables cross-platform development?
+- Flutter cho phép 1 codebase Dart để phát triển ứng dụng cho nhiều nền tảng như Android, iOS, Web, macOS, Linux, Window.
+- Flutter có framework và rendering engine riêng, giúp giao diện hiển thị nhất quán được trên nhiều nền tảng. Nhờ đó lập trình viên có thể tái sử dụng phần lớn code thay vì phải làm riêng từng cái cho từng nền tảng.
+
