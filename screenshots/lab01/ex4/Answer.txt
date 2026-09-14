@@ -28,4 +28,3 @@
 5.	Describe how Flutter’s architecture enables cross-platform development?
 - Flutter cho phép 1 codebase Dart để phát triển ứng dụng cho nhiều nền tảng như Android, iOS, Web, macOS, Linux, Window.
 - Flutter có framework và rendering engine riêng, giúp giao diện hiển thị nhất quán được trên nhiều nền tảng. Nhờ đó lập trình viên có thể tái sử dụng phần lớn code thay vì phải làm riêng từng cái cho từng nền tảng.
-

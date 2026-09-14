@@ -9,9 +9,7 @@ two separate top-level folders so the repository stays easy to review.
 repo_lab/
 |-- code/            Flutter & Dart source code, one folder per lab
 |   |-- lab01/
-|   |   |-- ex2/     `flutter create <project>` goes here
-|   |   |-- ex3/
-|   |   |-- ex4/
+|   |   |-- hello_flutter_lab1/  one Flutter project for Lab 1
 |   `-- lab02/ ... lab12/
 |-- screenshots/     evidence required by each lab, one folder per lab
 |   |-- lab01/
@@ -25,14 +23,15 @@ repo_lab/
 ## Conventions
 
 1. Folder name = lab number, zero padded: `lab01` ... `lab12`.
-2. Inside a lab, one sub-folder per exercise: `ex1`, `ex2`, ...
-3. Create each Flutter project inside its exercise folder:
-   `cd code/lab01/ex2` then `flutter create hello_flutter_lab1`.
+2. Each lab uses one Flutter project under its lab folder. Exercises are
+   tracked by the project code and the matching folders under `screenshots/`.
+3. For Lab 1, run the project from `code/lab01/hello_flutter_lab1`.
 4. Screenshots are PNG and named after what they prove, e.g.
    `Screenshot_of_flutter_doctor.png`, `Screenshot_of_hot_reload_title.png`.
 5. Build output (`build/`, `.dart_tool/`, `.gradle/`, `Pods/`) is never
    committed - see `.gitignore`.
-6. Commit per exercise so the history matches lab progress.
+6. Commit per lab milestone or exercise milestone; do not create a separate
+   Flutter project for every exercise unless the lab explicitly requires it.
 
 ## Lab index
 
@@ -62,8 +61,6 @@ repo_lab/
 | Android Studio | 2026.1.3, Flutter + Dart plugins installed (`screenshots/lab01/ex1`) |
 | VS Code | extensions `dart-code.flutter`, `dart-code.dart-code` |
 
-Known gap: the `emulator` and `system-images` SDK packages are not installed and
-no AVD exists yet, so Android runs need
-`sdkmanager "emulator" "system-images;android-36;google_apis;x86_64"` followed by
-`avdmanager create avd` first. Chrome, Edge and Windows desktop targets already
-work.
+Android emulator is available: AVD `pixel7_api36` targeting Android 36 was
+detected on 2026-09-14. Chrome, Edge and Windows desktop targets are also
+available.
