@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dart gọi icon thông báo bằng tên chuỗi ('ic_stat_notification') nên R8 không thấy
+     tham chiếu và có thể xoá icon khi build release. Khi đó initialize() của plugin
+     báo lỗi invalid_icon và app không mở được.
+     File này giữ icon lại (theo mục "Release build configuration" trong README plugin). -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_stat_notification" />
